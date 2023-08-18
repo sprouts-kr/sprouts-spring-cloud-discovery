@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>kr.sprouts.framework</groupId>
 	<artifactId>sprouts-spring-cloud-discovery</artifactId>
-	<version>0.0.2-SNAPSHOT</version>
+	<version>0.0.2</version>
 	<name>sprouts-spring-cloud-discovery</name>
 	<properties>
 		<sonar.qualitygate.wait>true</sonar.qualitygate.wait>
