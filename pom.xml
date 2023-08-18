@@ -13,6 +13,7 @@
 	<version>0.0.2-SNAPSHOT</version>
 	<name>sprouts-spring-cloud-discovery</name>
 	<properties>
+		<sonar.qualitygate.wait>true</sonar.qualitygate.wait>
 		<java.version>11</java.version>
 	</properties>
 	<repositories>
