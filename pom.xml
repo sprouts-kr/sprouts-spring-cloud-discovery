@@ -5,7 +5,7 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.7.13</version>
+		<version>2.7.14</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>kr.sprouts.framework</groupId>
@@ -13,7 +13,13 @@
 	<version>0.0.2-SNAPSHOT</version>
 	<name>sprouts-spring-cloud-discovery</name>
 	<properties>
+		<sonar.qualitygate.wait>true</sonar.qualitygate.wait>
 		<java.version>11</java.version>
+		<!-- dependency -->
+		<sprouts.logstash.appender.version>0.0.3</sprouts.logstash.appender.version>
+		<!-- plugin -->
+		<build.helper.maven.plugin.version>3.4.0</build.helper.maven.plugin.version>
+		<versions.maven.plugin.version>2.16.0</versions.maven.plugin.version>
 	</properties>
 	<repositories>
 		<!-- nexus3 maven public -->
@@ -27,7 +33,7 @@
 			<dependency>
 				<groupId>org.springframework.cloud</groupId>
 				<artifactId>spring-cloud-dependencies</artifactId>
-				<version>2021.0.7</version>
+				<version>2021.0.8</version>
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
@@ -69,11 +75,12 @@
 			<artifactId>spring-cloud-sleuth-zipkin</artifactId>
 		</dependency>
 
+		<!-- sprouts.kr -->
 		<!-- logstash appender -->
 		<dependency>
 			<groupId>kr.sprouts.autoconfigure</groupId>
 			<artifactId>sprouts-logstash-appender-spring-boot-starter</artifactId>
-			<version>0.0.2</version>
+			<version>${sprouts.logstash.appender.version}</version>
 		</dependency>
 
 		<!-- test -->
@@ -92,6 +99,7 @@
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>build-helper-maven-plugin</artifactId>
+				<version>${build.helper.maven.plugin.version}</version>
 				<executions>
 					<execution>
 						<id>parse-version</id>
@@ -104,6 +112,7 @@
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>versions-maven-plugin</artifactId>
+				<version>${versions.maven.plugin.version}</version>
 			</plugin>
 		</plugins>
 	</build>
@@ -120,6 +129,7 @@
 					<plugin>
 						<groupId>org.codehaus.mojo</groupId>
 						<artifactId>versions-maven-plugin</artifactId>
+						<version>${versions.maven.plugin.version}</version>
 						<executions>
 							<execution>
 								<goals>
@@ -150,6 +160,7 @@
 					<plugin>
 						<groupId>org.codehaus.mojo</groupId>
 						<artifactId>versions-maven-plugin</artifactId>
+						<version>${versions.maven.plugin.version}</version>
 						<executions>
 							<execution>
 								<goals>
