@@ -1,4 +1,4 @@
-package kr.sprouts.framework.discovery;
+package kr.sprouts.framework.service.discovery;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
