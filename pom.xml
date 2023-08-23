@@ -22,9 +22,9 @@
 		<versions.maven.plugin.version>2.16.0</versions.maven.plugin.version>
 	</properties>
 	<repositories>
-		<!-- nexus3 maven public -->
+		<!-- personal repository -->
 		<repository>
-			<id>nexus3-maven-public</id>
+			<id>personal-public</id>
 			<url>https://nexus.sprouts.kr/repository/maven/</url>
 		</repository>
 	</repositories>
