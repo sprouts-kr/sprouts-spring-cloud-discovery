@@ -12,7 +12,7 @@ spring:
     sampler:
       probability: 1.0
   zipkin:
-    base-url: http://zipkin.sprouts.kr/
+    base-url: http://zipkin.devops.sprouts.kr/
 
 eureka:
   instance:
