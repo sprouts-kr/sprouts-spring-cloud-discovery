@@ -12,7 +12,7 @@ spring:
     sampler:
       probability: 1.0
   zipkin:
-    base-url: http://zipkin.devops.sprouts.kr/
+    base-url: http://zipkin.framework.local/
 
 eureka:
   instance:
@@ -49,5 +49,5 @@ sprouts:
     name: LOGSTASH
     identifier: ${spring.application.name}-${spring.profiles.active}
     destinations:
-      - host: 192.168.0.100
+      - host: observability.local
         port: 5045
