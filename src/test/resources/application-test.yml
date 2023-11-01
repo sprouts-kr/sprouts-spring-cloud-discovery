@@ -8,11 +8,6 @@ spring:
   output:
     ansi:
       enabled: always
-  sleuth:
-    sampler:
-      probability: 1.0
-  zipkin:
-    base-url: http://zipkin.framework.local/
 
 eureka:
   instance:
@@ -43,6 +38,19 @@ management:
       enabled: true
     health:
       show-details: always
+  tracing:
+    sampling:
+      probability: 1.0
+    propagation:
+      consume: B3
+      produce: B3_MULTI
+  zipkin:
+    tracing:
+      endpoint: "http://zipkin.framework.local/api/v2/spans"
+
+logging:
+  pattern:
+    level: "%5p [${spring.application.name:},%X{traceId:-},%X{spanId:-}]"
 
 sprouts:
   logstash-appender:
