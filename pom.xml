@@ -4,7 +4,7 @@
   <parent>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-parent</artifactId>
-    <version>2.7.17</version>
+    <version>3.1.5</version>
     <relativePath/>
   </parent>
   <groupId>kr.sprouts.framework.service</groupId>
@@ -12,9 +12,10 @@
   <version>0.1.0-SNAPSHOT</version>
   <name>sprouts-spring-cloud-discovery</name>
   <properties>
-    <java.version>11</java.version>
+    <java.version>17</java.version>
+    <spring-cloud.version>2022.0.4</spring-cloud.version>
     <!-- dependency -->
-    <sprouts.logstash.appender.version>0.0.8</sprouts.logstash.appender.version>
+    <sprouts.logstash.appender.version>0.1.0-SNAPSHOT</sprouts.logstash.appender.version>
   </properties>
   <repositories>
     <!-- personal-repository -->
@@ -28,7 +29,7 @@
       <dependency>
         <groupId>org.springframework.cloud</groupId>
         <artifactId>spring-cloud-dependencies</artifactId>
-        <version>2021.0.8</version>
+        <version>${spring-cloud.version}</version>
         <type>pom</type>
         <scope>import</scope>
       </dependency>
@@ -60,14 +61,15 @@
       <groupId>io.micrometer</groupId>
       <artifactId>micrometer-registry-prometheus</artifactId>
     </dependency>
-    <!-- sleuth/zipkin -->
+    <!-- tracing -->
     <dependency>
-      <groupId>org.springframework.cloud</groupId>
-      <artifactId>spring-cloud-starter-sleuth</artifactId>
+      <groupId>io.micrometer</groupId>
+      <artifactId>micrometer-tracing-bridge-brave</artifactId>
     </dependency>
+    <!-- zipkin -->
     <dependency>
-      <groupId>org.springframework.cloud</groupId>
-      <artifactId>spring-cloud-sleuth-zipkin</artifactId>
+      <groupId>io.zipkin.reporter2</groupId>
+      <artifactId>zipkin-reporter-brave</artifactId>
     </dependency>
     <!-- logstash appender -->
     <dependency>
