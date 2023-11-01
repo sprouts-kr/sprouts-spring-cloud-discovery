@@ -16,9 +16,6 @@
 		<java.version>11</java.version>
 		<!-- dependency -->
 		<sprouts.logstash.appender.version>0.0.8</sprouts.logstash.appender.version>
-		<!-- plugin -->
-		<build.helper.maven.plugin.version>3.4.0</build.helper.maven.plugin.version>
-		<versions.maven.plugin.version>2.16.0</versions.maven.plugin.version>
 	</properties>
 	<repositories>
 		<!-- personal-repository -->
