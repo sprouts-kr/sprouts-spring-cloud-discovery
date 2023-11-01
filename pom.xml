@@ -15,7 +15,7 @@
     <java.version>11</java.version>
     <java.version>17</java.version>
     <!-- dependency -->
-    <sprouts.logstash.appender.version>0.0.8</sprouts.logstash.appender.version>
+    <sprouts.logstash.appender.version>0.1.0-SNAPSHOT</sprouts.logstash.appender.version>
   </properties>
   <repositories>
     <!-- personal-repository -->
