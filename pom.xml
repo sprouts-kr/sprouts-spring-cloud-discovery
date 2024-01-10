@@ -13,7 +13,7 @@
   <name>sprouts-spring-cloud-discovery</name>
   <properties>
     <java.version>17</java.version>
-    <spring-cloud.version>2022.0.4</spring-cloud.version>
+    <spring-cloud.version>2023.0.0</spring-cloud.version>
     <!-- dependency -->
     <sprouts.logstash.appender.version>0.1.0-SNAPSHOT</sprouts.logstash.appender.version>
   </properties>
